@@ -27,6 +27,9 @@
 /* ===========================================
  * General
  * ======================================== */
+@import "variables";
+@import "compass/css/compass";
+@import "mixins"; 
 #{":root"}{
     #{-(-main-padding-x)}    : 40 / 15 * 1rem;
     #{-(-safe-area-left)}    : 0px;

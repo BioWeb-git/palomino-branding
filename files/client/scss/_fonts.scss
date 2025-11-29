@@ -3,10 +3,10 @@
  * ======================================== */
 
 // Font
-//$font-family1: "Open Sans", sans-serif;
+$font-family1: "Ubuntu", sans-serif;
 //$font-family: $font-family1 !default;
 //$font-weight1: 400 !default;
-//$font-family2: "Oswald", sans-serif !default;
+$font-family2: "Ubuntu", sans-serif !default;
 //$font-weight2: 400 !default;
 @include font-face("RockSolid Icons", font-files("rocksolid-icons.woff", woff, "rocksolid-icons.ttf", truetype, "rocksolid-icons.svg", svg), "rocksolid-icons.eot", normal, normal);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');

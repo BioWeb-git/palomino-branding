@@ -19,3 +19,6 @@ javascripts_dir = "../js"
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
+# Désactive le cache Sass/Compass. Utile si vous utilisez un watch-mode fiable.
+cache = true
+enable_sprites  = false
