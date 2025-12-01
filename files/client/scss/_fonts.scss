@@ -8,6 +8,9 @@ $font-family1: "Mukta Mahee", sans-serif;
 //$font-weight1: 400 !default;
 $font-family2: "Mukta Mahee", sans-serif !default;
 //$font-weight2: 400 !default;
+
+$font-family: $font-family1; 
+
 @include font-face("RockSolid Icons", font-files("rocksolid-icons.woff", woff, "rocksolid-icons.ttf", truetype, "rocksolid-icons.svg", svg), "rocksolid-icons.eot", normal, normal);
 @import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
