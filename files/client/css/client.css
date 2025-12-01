@@ -5,7 +5,7 @@
  * HTML5 display definitions
  * ========================================================================== */
 /* Corrects block display not defined in IE6/7/8/9 & FF3 */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
@@ -17360,7 +17360,7 @@ nav[data-pagination] li .current, nav[data-pagination] li .active,
   font-style: normal;
 }
 .font1 {
-  font-family: Ubuntu, sans-serif !important;
+  font-family: Mukta Mahee, sans-serif !important;
 }
 
 .font2 {
@@ -17368,7 +17368,7 @@ nav[data-pagination] li .current, nav[data-pagination] li .active,
 }
 
 html {
-  font: 400 15px/1.6 Ubuntu, sans-serif;
+  font: 400 15px/1.6 Mukta Mahee, sans-serif;
   color: #242424;
 }
 @media screen and (max-width: 700px) {

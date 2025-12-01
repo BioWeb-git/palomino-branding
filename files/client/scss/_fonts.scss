@@ -3,13 +3,13 @@
  * ======================================== */
 
 // Font
-$font-family1: "Ubuntu", sans-serif;
+$font-family1: "Mukta Mahee", sans-serif;
 //$font-family: $font-family1 !default;
 //$font-weight1: 400 !default;
-$font-family2: "Ubuntu", sans-serif !default;
+$font-family2: "Mukta Mahee", sans-serif !default;
 //$font-weight2: 400 !default;
 @include font-face("RockSolid Icons", font-files("rocksolid-icons.woff", woff, "rocksolid-icons.ttf", truetype, "rocksolid-icons.svg", svg), "rocksolid-icons.eot", normal, normal);
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
 
 @mixin font1() { font: #{$font-weight1} #{$font-size}/#{$line-height} #{$font-family1}; }
