@@ -7,10 +7,62 @@
 }
 
 .centered-wrapper-background-margin {
-    min-height: calc(100vh - 100px);
-
+    height: calc(100vh - 100px);
     .centered-wrapper-background {
-        margin: 0 50px 50px;
+        top: 50px;
+        left: 50px;
+        right : 50px;
+        bottom: 50px;
+    }
+}
+.ambilight{
+    .master-wrapper{
+        .centered-wrapper-background {
+            z-index: 1;
+            border: 15px solid $white;
+        }
+        &::after{
+            content:"";
+            opacity: .6;
+			display: block;
+			position: absolute;
+			top: 40px;
+            left: 40px;
+            right : 40px;
+            bottom: 40px;
+			z-index: 0;
+            background-size: 100% 100%;
+			filter: blur(15px) saturate(2);
+        }
+    }
+    &.is-animated{
+        .master-wrapper{
+            &::after{
+                opacity: 0;
+                transform: scale(.9); 
+                @include transition(all 1s ease-in-out); 
+                transition-delay: 1.5s;
+            }
+        }
+        .centered-wrapper-background{
+            opacity: 0;
+            transform: scale(1.05); 
+            @include transition(all 2s ease-in-out);
+        }
+        &.in-view{
+            
+        .master-wrapper{
+            &::after{
+                    opacity: 1;
+                    transform: scale(1);
+
+                }
+            }
+            .centered-wrapper-background{
+                transform: scale(1); 
+                opacity: 1;
+            }
+        }
     }
 }
 

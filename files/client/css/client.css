@@ -17763,10 +17763,56 @@ form select {
 }
 
 .centered-wrapper-background-margin {
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }
 .centered-wrapper-background-margin .centered-wrapper-background {
-  margin: 0 50px 50px;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+}
+
+.ambilight .master-wrapper .centered-wrapper-background {
+  z-index: 1;
+  border: 15px solid #fff;
+}
+.ambilight .master-wrapper::after {
+  content: "";
+  opacity: .6;
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  z-index: 0;
+  background-size: 100% 100%;
+  filter: blur(15px) saturate(2);
+}
+.ambilight.is-animated .master-wrapper::after {
+  opacity: 0;
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  transition-delay: 1.5s;
+}
+.ambilight.is-animated .centered-wrapper-background {
+  opacity: 0;
+  transform: scale(1.05);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.ambilight.is-animated.in-view .master-wrapper::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.ambilight.is-animated.in-view .centered-wrapper-background {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .footer-copyright,

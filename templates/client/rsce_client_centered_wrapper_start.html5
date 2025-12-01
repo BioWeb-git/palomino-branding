@@ -136,7 +136,11 @@
 ?>
 
 <?php //echo var_dump($this); ?>
-
+<style>
+	.ambilight .master-wrapper:after{
+		<?= $backgroundStyle; ?>
+	}
+</style>
 <div class="<?php echo $this->alignmentWrapper ?> <?php echo implode(' ', $cssClasses) ?> <?php if ($this->outsideMargin): ?> outsideMargin outsideMargin-<?= str_replace(' ', '', $this->outsideMargin) ?><?php endif ?>" <?php if ($style): ?> style="<?php echo htmlspecialchars($style) ?>"<?php endif ?><?php echo $this->cssID ?> >
 	<div class="master-wrapper">
 		<?php if ($this->backgroundColor2 || $this->backgroundColor2Position): ?>
