@@ -78,12 +78,17 @@ body {
                 display: block;
             }
         }
+        .header-navigation{
+                padding-top: 40px;
+                @include transition(padding-top .3s ease-in-out);
+        }
     }
 
     &.scroll {
         .page-header {
             .header-navigation {
                 &.is-fixed {
+                    padding-top: 0;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 } 
             }
@@ -93,6 +98,10 @@ body {
 
 .page-header {
     .main-navigation {
+        font-size: 1.2em;
+        @include mediaquery-min(desktop) {
+            font-size: 1.4em;
+        }
         @include mediaquery(mobile) {
             display: block;
 
