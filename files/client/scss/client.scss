@@ -7,7 +7,7 @@
 }
 
 .centered-wrapper-background-margin {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     .centered-wrapper-background {
         top: 50px;
         left: 50px;
@@ -19,10 +19,10 @@
     .master-wrapper{
         .centered-wrapper-background {
             z-index: 1;
-            border: 15px solid $white;
+            border: 1px solid rgba($white, .3);
         }
         &::after{
-            content:"";
+            content:""; 
             opacity: .6;
 			display: block;
 			position: absolute;

@@ -17763,7 +17763,7 @@ form select {
 }
 
 .centered-wrapper-background-margin {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
 }
 .centered-wrapper-background-margin .centered-wrapper-background {
   top: 50px;
@@ -17774,7 +17774,7 @@ form select {
 
 .ambilight .master-wrapper .centered-wrapper-background {
   z-index: 1;
-  border: 15px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .ambilight .master-wrapper::after {
   content: "";
