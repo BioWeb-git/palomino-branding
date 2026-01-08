@@ -15,64 +15,65 @@ var scrollClass = function(){
     }
 }
 var initSnapScroll = function() {
-    var isScrolling = false;
+    // --- RÉGLAGES ---
+    var speed = 1500;      // Vitesse de l'animation en ms
+    var tolerance = 50;   // Marge d'erreur pour la détection des sections
     var $sections = $('.snap-section');
+    var isScrolling = false;
 
-    // On utilise addEventListener natif pour pouvoir passer { passive: false }
     window.addEventListener('wheel', function(e) {
         if (!$('body').hasClass('snap-scroll')) return;
         
-        // Maintenant le preventDefault fonctionnera
-        e.preventDefault();
-
-        if (isScrolling) return;
-
-        var delta = e.deltaY; // Natif utilise deltaY
+        var delta = e.deltaY;
         var direction = delta > 0 ? 1 : -1;
         var scrollTop = Math.round($(window).scrollTop());
-        
-        var currentIndex = -1;
-        var minDistance = Infinity;
+        var lastSectionTop = Math.round($sections.last().offset().top);
 
-        $sections.each(function(index) {
-            var distance = Math.abs($(this).offset().top - scrollTop);
-            if (distance < minDistance) {
-                minDistance = distance;
-                currentIndex = index;
-            }
-        });
+        // 1. SORTIE BAS DE PAGE : On laisse le scroll naturel après le dernier snap
+        if (direction === 1 && scrollTop >= lastSectionTop - tolerance) return;
 
-        console.log("--- Debug Scroll ---");
-        console.log("Pos:", scrollTop, "| Dir:", direction > 0 ? "Bas" : "Haut", "| Current:", currentIndex);
+        e.preventDefault();
+        if (isScrolling) return;
 
         var targetScroll = -1;
 
-        if (direction === -1) {
-            // Si on monte et qu'on est sur la première section (0) OU la deuxième (1)
-            // on force le retour au TOUT DEBUT (0px) pour voir le header
-            if (currentIndex <= 1) {
-                targetScroll = 0;
+        // 2. NAVIGATION VERS LE BAS
+        if (direction === 1) {
+            // Si on est au sommet (Header), on saute direct à la 2ème section (index 1)
+            if (scrollTop <= tolerance) {
+                targetScroll = Math.round($sections.eq(1).offset().top);
             } else {
-                targetScroll = $sections.eq(currentIndex - 1).offset().top;
+                $sections.each(function() {
+                    var sectionTop = Math.round($(this).offset().top);
+                    if (sectionTop > scrollTop + tolerance) {
+                        targetScroll = sectionTop;
+                        return false; 
+                    }
+                });
             }
-        } else if (direction === 1) {
-            // On descend
-            if (currentIndex < $sections.length - 1) {
-                targetScroll = $sections.eq(currentIndex + 1).offset().top;
-            }
+        } 
+        // 3. NAVIGATION VERS LE HAUT
+        else {
+            $($sections.get().reverse()).each(function() {
+                var sectionTop = Math.round($(this).offset().top);
+                if (sectionTop < scrollTop - tolerance) {
+                    // Si on remonte vers la 1ère section, on vise le 0 absolu (Header)
+                    targetScroll = $(this).is($sections.first()) ? 0 : sectionTop;
+                    return false; 
+                }
+            });
+            // Sécurité : si on est entre le 0 et la 1ère section
+            if (targetScroll === -1 && scrollTop > 0) targetScroll = 0;
         }
 
+        // 4. EXÉCUTION DE L'ANIMATION
         if (targetScroll !== -1) {
             isScrolling = true;
-            console.log("Action : Animation vers", targetScroll);
-            
-            $('html, body').stop().animate({
-                scrollTop: targetScroll
-            }, 800, 'swing', function() {
-                setTimeout(function() { isScrolling = false; }, 200);
+            $('html, body').stop().animate({ scrollTop: targetScroll }, speed, 'swing', function() {
+                setTimeout(function() { isScrolling = false; }, 150);
             });
         }
-    }, { passive: false }); // CRUCIAL pour corriger l'erreur console
+    }, { passive: false });
 };
 
 var scrollAnchor = function(){
