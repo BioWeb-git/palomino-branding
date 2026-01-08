@@ -26,14 +26,13 @@
         "source": "https://github.com/contao/contao-demo",
         "docs": "https://docs.contao.org"
     },
-    "repositories": [
+    "_repositories_": [
         {
             "type": "git",
             "url": "https://github.com/BioWeb-git/bioweb-bundle.git"
         }
     ],
     "require": {
-        "bioweb/bioweb-bundle": "dev-master",
         "codefog/contao-haste": "^5.2",
         "codefog/contao-news_categories": "^4.0",
         "contao-themes-net/font-awesome-inserttag-bundle": "^1.1",
@@ -70,7 +69,10 @@
         "terminal42/dc_multilingual": "^4.5",
         "terminal42/notification_center": "^2.0",
         "timgatzky/form_google_recaptcha": "^2.0",
-        "trilobit-gmbh/contao-tiles-bundle": "^2.0"
+        "trilobit-gmbh/contao-tiles-bundle": "^2.0",
+        "doctrine/orm": "^2.19",
+        "doctrine/dbal": "^3.7",
+        "doctrine/annotations": "^2.0"
     },
     "extra": {
         "contao-component-dir": "assets",

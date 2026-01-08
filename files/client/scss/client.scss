@@ -5,14 +5,79 @@
 .text-intro {
     font-size: 1.2em;
 }
-
+h2{
+    font-weight: 300;
+    font-style: italic;
+}
+.headline-box{
+    &.h2{
+        .headline, .subhealine{
+            font-size: 2.5em;
+            @extend .font2;
+            font-weight: 400;
+        }
+        .subhealine{
+            margin-left: 25px;
+            font-weight: 400;
+        }
+    }
+    &:after{
+        display: none;
+    }
+}
+.snap-scroll {
+  // On remonte au parent HTML
+  /*html:has(&) {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    .snap-section{ 
+        scroll-snap-align: start;
+    }
+  }*/
+}
+.slice1{
+    &.is-animated{
+        .headline-box, .text1, .text2{
+            opacity: 0;
+            transform: translateY(50px);
+            @include transition(all 1.5s ease-in-out);
+            
+        }
+        &.in-view{
+            .headline-box, .text1, .text2{
+                opacity: 1;
+                transform: translateY(0);   
+            }
+        }
+        .text1{
+            transition-delay: .6s;
+        }
+        .text2{
+            transition-delay: .8s;
+        }
+    } 
+}
 .centered-wrapper-background-margin {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 200px);
     .centered-wrapper-background {
-        top: 50px;
+        top: 50px; 
         left: 50px;
         right : 50px;
         bottom: 50px;
+    }
+}
+.text-type2{
+    font-size: 2em;
+    line-height: 1.1;
+    @extend .font2;
+
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings:
+        "wdth" 100;
+    p{
+        margin: 25px 0;
     }
 }
 .ambilight{

@@ -13,7 +13,7 @@
 	}
 ?>
 
-<div class="<?php echo implode(' ', $cssClasses) ?><?php if($this->iconImage) : ?> icon-image <?php endif ?>"<?php echo $this->cssID; ?><?php if ($this->icon && $this->iconImage == ""): ?> data-icon="&#x<?php echo $this->icon ?>;"<?php endif ?>>
+<div class="<?php echo implode(' ', $cssClasses) ?><?php if($this->iconImage) : ?> icon-image <?php endif ?> <?= $this->headline['unit'] ?>"<?php echo $this->cssID; ?><?php if ($this->icon && $this->iconImage == ""): ?> data-icon="&#x<?php echo $this->icon ?>;"<?php endif ?>>
 	<?php if($this->iconImage) : ?>
 		<img class="headline-box-icon" src="<?= $this->getImageObject($this->iconImage,$this->iconSize)->src ?>" alt="Icône">
 	<?php endif ?>
