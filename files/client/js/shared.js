@@ -14,6 +14,73 @@ var scrollClass = function(){
         $("body").removeClass("scroll");
     }
 }
+function animateHeadline(headlineElement) {
+    const $headline = $(headlineElement);
+    if ($headline.find('.char').length > 0) return;
+
+    $headline.css('opacity', '0');
+
+    let headlineHTML = $headline.html()
+        .replace(/[\n\t]/g, '') 
+        .replace(/<br>/gi, ' <span class="br-forcer"></span> '); 
+    $headline.html(headlineHTML);
+
+    $headline.lettering('words');
+    $headline.find('span').lettering();
+
+    const letters = $headline.find('span').find('span'); 
+    const tl = gsap.timeline();
+
+    tl.from(letters, {
+        opacity: 0,
+        y: (i, target) => gsap.utils.random(-100, -200), 
+        x: (i, target) => gsap.utils.random(-50, 50), 
+        rotation: (i, target) => gsap.utils.random(-90, 90), 
+        scale: 0.8,
+        transformOrigin: "50% 50%",
+        stagger: {
+            each: 0.08,        // ⬅️ AUGMENTER (était à 0.03) : plus de temps entre chaque lettre
+            from: "random" 
+        },
+        duration: 1.5,         // ⬅️ AUGMENTER (était à 0.8) : chaque lettre met plus de temps à tomber
+        ease: "power2.out", 
+    });
+
+    tl.to($headline, { opacity: 1, duration: 1.2, ease: "power2.out" }, 0); 
+}
+// 2. Déclencheur au scroll (IntersectionObserver)
+var scrollInView = function() {
+    const animatedElements = document.querySelectorAll('.headline-box.ce_rsce_client_headline_box_custom');
+
+    // Initialisation de ScrollTrigger si dispo
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+    
+    const observerOptions = {
+        root: null,
+        threshold: 0.2 
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // On récupère tous les titres et sous-titres dans l'élément observé
+                const elementsToAnimate = entry.target.querySelectorAll('.headline, .subheadline');
+                
+                elementsToAnimate.forEach(el => {
+                    animateHeadline(el);
+                });
+
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+};
 var initSnapScroll = function() {
     // --- RÉGLAGES ---
     var speed = 1500;      // Vitesse de l'animation en ms
@@ -101,6 +168,7 @@ $(document).ready(function () {
     scrollAnchor();
     scrollClass();
     initSnapScroll(); // Activation du snap
+    scrollInView();
 });
 
 $(window).on('load', function () {

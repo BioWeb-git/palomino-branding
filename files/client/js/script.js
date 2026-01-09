@@ -190,12 +190,12 @@
 
 		updateOriginalValues();
 
-		var mediaQuery = window.matchMedia && window.matchMedia("(max-width: 1000px)");
+		var mediaQuery = window.matchMedia && window.matchMedia("(max-width: 700px)");
 		var mediaQueryMatches = function() {
 			if (mediaQuery) {
 				return mediaQuery.matches;
 			}
-			return window.Modernizr && Modernizr.mq && Modernizr.mq("(max-width: 1000px)");
+			return window.Modernizr && Modernizr.mq && Modernizr.mq("(max-width: 700px)");
 		};
 
 		var scroll = function() {

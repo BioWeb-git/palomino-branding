@@ -2059,7 +2059,8 @@ button, .button, input[type="submit"]{
     }
     &.-viewport-height{
         min-height : 710px;
-        min-height : calc(100vh - #{em(58)});
+        //min-height : calc(100vh - #{em(58)});
+        min-height : calc(100vh);
         @include mediaquery(tablet){
             min-height : 100vh;
         }
