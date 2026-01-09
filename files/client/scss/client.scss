@@ -38,40 +38,61 @@ h2{
 
 }
 .snap-scroll {
-  // On remonte au parent HTML
-  /*html:has(&) {
+    // On remonte au parent HTML
+    /*html:has(&) {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     .snap-section{ 
         scroll-snap-align: start;
     }
-  }*/
-}
-.slice{
-    margin: 0 25px;
-    @include mediaquery-min(tablet){
-        margin: 0 50px;
-        > .centered-wrapper{
-            padding-top: 100px;
-        }
+    }*/
+    .snap-section{
+        height: 100vh;
+        padding-top: 100px;
     }
-    .rte{
-        font-size: 1.3em;
-    }
-    &.is-animated{
-        .fade-up{
-            opacity: 0;
-            transform: translateY(50px);
-            @include transition(all 1.5s ease-in-out);
-            
-        }
-        &.in-view{
-            .fade-up{
-                opacity: 1;
-                transform: translateY(0);   
+    
+    .main-content{
+        > .mod_article{
+            &:first-child{
+                .snap-section{ 
+                    height: calc(100vh - 195px);
+                } 
             }
         }
-        .centered-wrapper{
+    }
+    &.home-page{
+        .main-content{
+            > .mod_article{
+                &:first-child{
+                    .snap-section{ 
+                            
+                    } 
+                }
+            }
+        }
+    }
+        
+}
+.centered-wrapper{
+    &.is-animated{
+        .centered-wrapper-inner {
+            .fade-up{
+                opacity: 0;
+                transform: translateY(50px);
+                @include transition(all 1.5s ease-in-out);
+                
+            }
+        }
+        
+        &.in-view{ 
+            .centered-wrapper-inner {
+                .fade-up{
+                    opacity: 1;
+                    transform: translateY(0);   
+                }
+            }
+        }
+        .centered-wrapper-inner {
             @for $i from 1 through 10 {
                 .fade-up {
                     &:nth-child(#{$i}) {
@@ -82,22 +103,20 @@ h2{
         }
     } 
 }
-.centered-wrapper-background-margin {
-    height: calc(100vh - 200px);
-    .centered-wrapper-background {
-        top: 25px; 
-        left: 25px;
-        right : 25px;
-        bottom: 25px;
-         @include mediaquery-min(tablet){
-            top: 50px; 
-            left: 50px;
-            right : 50px;
-            bottom: 50px;
-         }
-        
+.slice{
+    margin: 0 25px;
+    @include mediaquery-min(tablet){
+        margin: 0 50px;
+    }
+    .rte{
+        font-size: 1.3em;
+    }
+    
+    .full-height{
+        min-height: calc(100vh - 300px);
     }
 }
+
 .text-type2{
     @extend .font2;
     font-size: 1.6em;
