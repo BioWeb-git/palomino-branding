@@ -14,7 +14,7 @@
   font-family: Mukta Mahee, sans-serif !important;
 }
 
-.font2, .headline-box.h2 .headline, .headline-box.h2 .subheadline, .text-type2 {
+.font2, .headline-box.h2 .headline, .headline-box.h2 .subheadline, .headline-box.h1 .headline, .headline-box.h1 .subheadline, .text-type2 {
   font-family: Noto Serif Display, serif !important;
 }
 
@@ -18353,19 +18353,21 @@ form select {
   font-size: 1.3em;
 }
 
-h2 {
+h1, h2 {
+  font-size: 1em !important;
   font-weight: 300;
   font-style: italic;
 }
 
-.headline-box.h2 .headline, .headline-box.h2 .subheadline {
-  font-size: 2.5em;
+.headline-box.h2 .headline, .headline-box.h2 .subheadline, .headline-box.h1 .headline, .headline-box.h1 .subheadline {
+  line-height: 1;
+  font-size: 1.8em;
   font-weight: 400;
 }
-.headline-box.h2 .headline span, .headline-box.h2 .subheadline span {
+.headline-box.h2 .headline span, .headline-box.h2 .subheadline span, .headline-box.h1 .headline span, .headline-box.h1 .subheadline span {
   display: inline-block;
 }
-.headline-box.h2 .headline .br-forcer, .headline-box.h2 .subheadline .br-forcer {
+.headline-box.h2 .headline .br-forcer, .headline-box.h2 .subheadline .br-forcer, .headline-box.h1 .headline .br-forcer, .headline-box.h1 .subheadline .br-forcer {
   display: block;
   /* Force le saut de ligne */
   width: 100%;
@@ -18374,8 +18376,14 @@ h2 {
   /* Assurez-vous que les marges éventuelles du <br> ne sont pas présentes ici */
   margin: 0;
 }
-.headline-box.h2 .subheadline {
+.headline-box.h2 .subheadline, .headline-box.h1 .subheadline {
   font-weight: 400;
+}
+.headline-box.h1 {
+  font-size: 3em !important;
+}
+.headline-box.h2 {
+  font-size: 2em !important;
 }
 .headline-box:after {
   display: none;
@@ -18444,12 +18452,7 @@ h2 {
 }
 
 .slice {
-  margin: 0 25px;
-}
-@media screen and (min-width: 1001px) {
-  .slice {
-    margin: 0 50px;
-  }
+  margin: 0;
 }
 .slice .rte {
   font-size: 1.3em;
@@ -18522,6 +18525,11 @@ h2 {
 .footer-copyright,
 .icon-links:not(.full-links) a:before {
   color: #000;
+}
+
+main {
+  margin-top: 10px !important;
+  border-top: 1px solid #000;
 }
 
 body.home .main-navigation .home {
@@ -18635,6 +18643,11 @@ body.scroll .page-header .header-navigation.is-fixed {
   box-shadow: none;
 }
 
+@container (max-width: 700px) {
+  form.contact-form .widget-textarea {
+    margin: 0 0 1em;
+  }
+}
 form.contact-form textarea {
   height: 155px;
 }
@@ -18644,4 +18657,11 @@ form.contact-form .widget-submit {
 }
 form.contact-form .widget-submit .submit {
   margin: 0 1rem 0 0;
+}
+form.contact-form .rs-columns, form.contact-form .news-image-teaser {
+  gap: 0 2%;
+}
+form.contact-form .rs-columns .rs-column, form.contact-form .news-image-teaser .rs-column {
+  align-items: center;
+  justify-content: center;
 }

@@ -5,14 +5,16 @@
 .text-intro {
     font-size: 1.3em;
 }
-h2{
+h1, h2{
+    font-size: 1em !important;
     font-weight: 300;
     font-style: italic;
 }
 .headline-box{
-    &.h2{
+    &.h2, &.h1{
         .headline, .subheadline{
-            font-size: 2.5em;
+            line-height: 1;
+            font-size: 1.8em;
             @extend .font2;
             font-weight: 400;
             span {
@@ -31,6 +33,12 @@ h2{
         .subheadline{
             font-weight: 400;
         }
+    }
+    &.h1{
+        font-size: 3em !important;
+    }
+    &.h2{
+        font-size: 2em !important;
     }
     &:after{
         display: none;
@@ -104,9 +112,9 @@ h2{
     } 
 }
 .slice{
-    margin: 0 25px;
+    margin: 0;
     @include mediaquery-min(tablet){
-        margin: 0 50px;
+        //margin: 0 50px;
     }
     .rte{
         font-size: 1.3em;
@@ -186,7 +194,10 @@ h2{
 .icon-links:not(.full-links) a:before {
     color: $color1;
 }
-
+main{
+    margin-top: 10px !important;  
+    border-top: 1px solid $black;  
+}
 body {
     &.home {
         .main-navigation {
@@ -332,14 +343,27 @@ body {
 }
 form{
     &.contact-form{
+        
+        .widget-textarea{
+            @include container(mobile){
+                margin: 0 0 1em;
+            }
+        }
         textarea{
-            height: 155px;
+            height: 155px; 
         }
         .widget-submit{
             margin: 0;
             text-align: right;
             .submit{
                 margin: 0 1rem 0 0;
+            }
+        }
+        .rs-columns{
+            gap: 0 2%;
+            .rs-column{
+                align-items: center;
+                justify-content: center;
             }
         }
     }

@@ -82,10 +82,14 @@ var scrollInView = function() {
     });
 };
 var initSnapScroll = function() {
-    // --- RÉGLAGES ---
-    var speed = 1500;      // Vitesse de l'animation en ms
-    var tolerance = 50;   // Marge d'erreur pour la détection des sections
     var $sections = $('.snap-section');
+    
+    // CONDITION DE SÉCURITÉ : 
+    // S'il n'y a pas de sections ou une seule, on n'active pas le script.
+    if ($sections.length <= 1) return;
+
+    var speed = 1500;
+    var tolerance = 50;
     var isScrolling = false;
 
     window.addEventListener('wheel', function(e) {
@@ -106,7 +110,6 @@ var initSnapScroll = function() {
 
         // 2. NAVIGATION VERS LE BAS
         if (direction === 1) {
-            // Si on est au sommet (Header), on saute direct à la 2ème section (index 1)
             if (scrollTop <= tolerance) {
                 targetScroll = Math.round($sections.eq(1).offset().top);
             } else {
@@ -124,16 +127,14 @@ var initSnapScroll = function() {
             $($sections.get().reverse()).each(function() {
                 var sectionTop = Math.round($(this).offset().top);
                 if (sectionTop < scrollTop - tolerance) {
-                    // Si on remonte vers la 1ère section, on vise le 0 absolu (Header)
                     targetScroll = $(this).is($sections.first()) ? 0 : sectionTop;
                     return false; 
                 }
             });
-            // Sécurité : si on est entre le 0 et la 1ère section
             if (targetScroll === -1 && scrollTop > 0) targetScroll = 0;
         }
 
-        // 4. EXÉCUTION DE L'ANIMATION
+        // 4. EXÉCUTION
         if (targetScroll !== -1) {
             isScrolling = true;
             $('html, body').stop().animate({ scrollTop: targetScroll }, speed, 'swing', function() {
