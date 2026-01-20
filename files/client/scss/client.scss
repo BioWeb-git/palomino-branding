@@ -14,7 +14,6 @@ h1, h2{
     &.h2, &.h1{
         .headline, .subheadline{
             line-height: 1;
-            font-size: 1.8em;
             @extend .font2;
             font-weight: 400;
             span {
@@ -36,9 +35,15 @@ h1, h2{
     }
     &.h1{
         font-size: 3em !important;
+        @include mediaquery(tablet){
+            font-size: 2.5em !important; 
+        }
     }
     &.h2{
-        font-size: 2em !important;
+        font-size: 3em !important; 
+        @include mediaquery(tablet){
+            font-size: 2.5em !important; 
+        }
     }
     &:after{
         display: none;
@@ -55,8 +60,49 @@ h1, h2{
     }
     }*/
     .snap-section{
-        height: 100vh;
         padding-top: 100px;
+        min-height: 800px;
+        @include mediaquery-min(tablet){
+            height: 100vh;
+        }
+        &.snap-100{
+            .centered-wrapper-inner, 
+            .rs-columns-master, 
+            .rs-columns, 
+            .rs-column, 
+            .centered-wrapper, 
+            .content-image,
+            .content-image figure{
+                height: 100% !important;
+            }
+            .content-image{
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+            }
+            .content-image figure img{
+                max-height: 600px;
+            }
+        }
+        .gap-10{
+            gap: 10px !important; 
+            .rs-column{
+                flex-grow: 1 !important;
+            }
+        }
+        .column-80{
+            .rs-column{
+                height: 80% !important;
+            }
+        }
+        .headline-box{
+            margin-top: 25px; 
+            margin-bottom: 15px;
+            @include mediaquery-min(tablet){
+                margin-top: 35px; 
+                margin-bottom: 25px;
+            }
+        }
     }
     
     .main-content{
@@ -82,6 +128,15 @@ h1, h2{
         
 }
 .centered-wrapper{
+    &.absolute{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        color: $white;
+    }
     &.is-animated{
         .centered-wrapper-inner {
             .fade-up{
@@ -124,18 +179,29 @@ h1, h2{
         min-height: calc(100vh - 300px);
     }
 }
-
-.text-type2{
-    @extend .font2;
-    font-size: 1.6em;
-    line-height: 1.1;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: italic;
-    p{
-        margin: 0 0 25px;
-        &:last-child{
-            margin-bottom: 0;
+.content-text{
+    @include mediaquery(tablet){
+        font-size:.9em; 
+    }
+    &.text-type2{
+        @extend .font2;
+        font-size: 1.6em;
+        line-height: 1.1;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: italic;
+        p{
+            margin: 0 0 25px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .rte{
+        p{
+            &:last-child{
+                margin-bottom: 0 !important;
+            }
         }
     }
 }

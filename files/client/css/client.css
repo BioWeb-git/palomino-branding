@@ -14,7 +14,7 @@
   font-family: Mukta Mahee, sans-serif !important;
 }
 
-.font2, .headline-box.h2 .headline, .headline-box.h2 .subheadline, .headline-box.h1 .headline, .headline-box.h1 .subheadline, .text-type2 {
+.font2, .headline-box.h2 .headline, .headline-box.h2 .subheadline, .headline-box.h1 .headline, .headline-box.h1 .subheadline, .content-text.text-type2 {
   font-family: Noto Serif Display, serif !important;
 }
 
@@ -10193,8 +10193,8 @@ pre code {
   display: inline;
 }
 
-button.-secondary, .button.-secondary, .-secondary.module-cookiebar-opener, input[type="submit"].-secondary, .page-header .header-login .formbody input[type=submit],
-.page-header .header-dropdown > ul input[type=submit], .main-navigation-search-form button, .feature-box-link.-secondary, .headline-box-link.-secondary, .pricing-table-plan a.-secondary, button.-quaternary, .button.-quaternary, .-quaternary.module-cookiebar-opener, input[type="submit"].-quaternary, .feature-box-link, .headline-box-link, .pricing-table-plan a, button, .button, .module-cookiebar-opener, input[type="submit"], input[type="reset"], input[type="button"] {
+button.-secondary, .button.-secondary, .module-cookiebar-opener a.-secondary, input[type="submit"].-secondary, .page-header .header-login .formbody input[type=submit],
+.page-header .header-dropdown > ul input[type=submit], .main-navigation-search-form button, .feature-box-link.-secondary, .headline-box-link.-secondary, .pricing-table-plan a.-secondary, button.-quaternary, .button.-quaternary, .module-cookiebar-opener a.-quaternary, input[type="submit"].-quaternary, .feature-box-link, .headline-box-link, .pricing-table-plan a, button, .button, .module-cookiebar-opener a, input[type="submit"], input[type="reset"], input[type="button"] {
   position: relative;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -10211,61 +10211,61 @@ button.-secondary, .button.-secondary, .-secondary.module-cookiebar-opener, inpu
   text-transform: uppercase;
   background: #000;
 }
-button.-secondary:hover, .button.-secondary:hover, .-secondary.module-cookiebar-opener:hover, input[type="submit"].-secondary:hover, .page-header .header-login .formbody input[type=submit]:hover,
-.page-header .header-dropdown > ul input[type=submit]:hover, .main-navigation-search-form button:hover, button.-quaternary:hover, .button.-quaternary:hover, .-quaternary.module-cookiebar-opener:hover, input[type="submit"].-quaternary:hover, .feature-box-link:hover, .headline-box-link:hover, .pricing-table-plan a:hover, button.-secondary:focus, .button.-secondary:focus, .-secondary.module-cookiebar-opener:focus, input[type="submit"].-secondary:focus, .page-header .header-login .formbody input[type=submit]:focus,
-.page-header .header-dropdown > ul input[type=submit]:focus, .main-navigation-search-form button:focus, button.-quaternary:focus, .button.-quaternary:focus, .-quaternary.module-cookiebar-opener:focus, input[type="submit"].-quaternary:focus, .feature-box-link:focus, .headline-box-link:focus, .pricing-table-plan a:focus, button:hover, button:focus, .button:hover, .module-cookiebar-opener:hover, .button:focus, .module-cookiebar-opener:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
+button.-secondary:hover, .button.-secondary:hover, .module-cookiebar-opener a.-secondary:hover, input[type="submit"].-secondary:hover, .page-header .header-login .formbody input[type=submit]:hover,
+.page-header .header-dropdown > ul input[type=submit]:hover, .main-navigation-search-form button:hover, button.-quaternary:hover, .button.-quaternary:hover, .module-cookiebar-opener a.-quaternary:hover, input[type="submit"].-quaternary:hover, .feature-box-link:hover, .headline-box-link:hover, .pricing-table-plan a:hover, button.-secondary:focus, .button.-secondary:focus, .module-cookiebar-opener a.-secondary:focus, input[type="submit"].-secondary:focus, .page-header .header-login .formbody input[type=submit]:focus,
+.page-header .header-dropdown > ul input[type=submit]:focus, .main-navigation-search-form button:focus, button.-quaternary:focus, .button.-quaternary:focus, .module-cookiebar-opener a.-quaternary:focus, input[type="submit"].-quaternary:focus, .feature-box-link:focus, .headline-box-link:focus, .pricing-table-plan a:focus, button:hover, button:focus, .button:hover, .module-cookiebar-opener a:hover, .button:focus, .module-cookiebar-opener a:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
   background-color: black;
   text-decoration: none;
 }
-button.-secondary:active, .button.-secondary:active, .-secondary.module-cookiebar-opener:active, input[type="submit"].-secondary:active, .page-header .header-login .formbody input[type=submit]:active,
-.page-header .header-dropdown > ul input[type=submit]:active, .main-navigation-search-form button:active, button.-quaternary:active, .button.-quaternary:active, .-quaternary.module-cookiebar-opener:active, input[type="submit"].-quaternary:active, .feature-box-link:active, .headline-box-link:active, .pricing-table-plan a:active, button:active, .button:active, .module-cookiebar-opener:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+button.-secondary:active, .button.-secondary:active, .module-cookiebar-opener a.-secondary:active, input[type="submit"].-secondary:active, .page-header .header-login .formbody input[type=submit]:active,
+.page-header .header-dropdown > ul input[type=submit]:active, .main-navigation-search-form button:active, button.-quaternary:active, .button.-quaternary:active, .module-cookiebar-opener a.-quaternary:active, input[type="submit"].-quaternary:active, .feature-box-link:active, .headline-box-link:active, .pricing-table-plan a:active, button:active, .button:active, .module-cookiebar-opener a:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
   background-color: black;
 }
-button.-small.-secondary, .-small.button.-secondary, .-small.-secondary.module-cookiebar-opener, input.-small[type="submit"].-secondary, .page-header .header-login .formbody input.-small[type=submit],
-.page-header .header-dropdown > ul input.-small[type=submit], .main-navigation-search-form button.-small, button.-small.-quaternary, .-small.button.-quaternary, .-small.-quaternary.module-cookiebar-opener, input.-small[type="submit"].-quaternary, .-small.feature-box-link, .-small.headline-box-link, .pricing-table-plan a.-small, button.-small, .button.-small, .-small.module-cookiebar-opener, input[type="submit"].-small, input[type="reset"].-small, input[type="button"].-small {
+button.-small.-secondary, .-small.button.-secondary, .module-cookiebar-opener a.-small.-secondary, input.-small[type="submit"].-secondary, .page-header .header-login .formbody input.-small[type=submit],
+.page-header .header-dropdown > ul input.-small[type=submit], .main-navigation-search-form button.-small, button.-small.-quaternary, .-small.button.-quaternary, .module-cookiebar-opener a.-small.-quaternary, input.-small[type="submit"].-quaternary, .-small.feature-box-link, .-small.headline-box-link, .pricing-table-plan a.-small, button.-small, .button.-small, .module-cookiebar-opener a.-small, input[type="submit"].-small, input[type="reset"].-small, input[type="button"].-small {
   padding: 0.66667em 1em;
   font-size: 0.8em;
   line-height: 1.6675;
 }
-button.-medium.-secondary, .-medium.button.-secondary, .-medium.-secondary.module-cookiebar-opener, input.-medium[type="submit"].-secondary, .page-header .header-login .formbody input.-medium[type=submit],
-.page-header .header-dropdown > ul input.-medium[type=submit], .main-navigation-search-form button.-medium, button.-medium.-quaternary, .-medium.button.-quaternary, .-medium.-quaternary.module-cookiebar-opener, input.-medium[type="submit"].-quaternary, .-medium.feature-box-link, .-medium.headline-box-link, .pricing-table-plan a.-medium, button.-medium, .button.-medium, .-medium.module-cookiebar-opener, input[type="submit"].-medium, input[type="reset"].-medium, input[type="button"].-medium {
+button.-medium.-secondary, .-medium.button.-secondary, .module-cookiebar-opener a.-medium.-secondary, input.-medium[type="submit"].-secondary, .page-header .header-login .formbody input.-medium[type=submit],
+.page-header .header-dropdown > ul input.-medium[type=submit], .main-navigation-search-form button.-medium, button.-medium.-quaternary, .-medium.button.-quaternary, .module-cookiebar-opener a.-medium.-quaternary, input.-medium[type="submit"].-quaternary, .-medium.feature-box-link, .-medium.headline-box-link, .pricing-table-plan a.-medium, button.-medium, .button.-medium, .module-cookiebar-opener a.-medium, input[type="submit"].-medium, input[type="reset"].-medium, input[type="button"].-medium {
   padding: 0.75em 1em;
   font-size: 1.2em;
   line-height: 1.11167;
 }
-button.-large.-secondary, .-large.button.-secondary, .-large.-secondary.module-cookiebar-opener, input.-large[type="submit"].-secondary, .page-header .header-login .formbody input.-large[type=submit],
-.page-header .header-dropdown > ul input.-large[type=submit], .main-navigation-search-form button.-large, button.-large.-quaternary, .-large.button.-quaternary, .-large.-quaternary.module-cookiebar-opener, input.-large[type="submit"].-quaternary, .-large.feature-box-link, .-large.headline-box-link, .pricing-table-plan a.-large, button.-large, .button.-large, .-large.module-cookiebar-opener, input[type="submit"].-large, input[type="reset"].-large, input[type="button"].-large {
+button.-large.-secondary, .-large.button.-secondary, .module-cookiebar-opener a.-large.-secondary, input.-large[type="submit"].-secondary, .page-header .header-login .formbody input.-large[type=submit],
+.page-header .header-dropdown > ul input.-large[type=submit], .main-navigation-search-form button.-large, button.-large.-quaternary, .-large.button.-quaternary, .module-cookiebar-opener a.-large.-quaternary, input.-large[type="submit"].-quaternary, .-large.feature-box-link, .-large.headline-box-link, .pricing-table-plan a.-large, button.-large, .button.-large, .module-cookiebar-opener a.-large, input[type="submit"].-large, input[type="reset"].-large, input[type="button"].-large {
   padding: 0.71429em 0.95238em;
   font-size: 1.4em;
   line-height: 0.95286;
 }
-button.-super-size.-secondary, .-super-size.button.-secondary, .-super-size.-secondary.module-cookiebar-opener, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
-.page-header .header-dropdown > ul input.-super-size[type=submit], .main-navigation-search-form button.-super-size, button.-super-size.-quaternary, .-super-size.button.-quaternary, .-super-size.-quaternary.module-cookiebar-opener, input.-super-size[type="submit"].-quaternary, .-super-size.feature-box-link, .-super-size.headline-box-link, .pricing-table-plan a.-super-size, button.-super-size, .button.-super-size, .-super-size.module-cookiebar-opener, input[type="submit"].-super-size, input[type="reset"].-super-size, input[type="button"].-super-size {
+button.-super-size.-secondary, .-super-size.button.-secondary, .module-cookiebar-opener a.-super-size.-secondary, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
+.page-header .header-dropdown > ul input.-super-size[type=submit], .main-navigation-search-form button.-super-size, button.-super-size.-quaternary, .-super-size.button.-quaternary, .module-cookiebar-opener a.-super-size.-quaternary, input.-super-size[type="submit"].-quaternary, .-super-size.feature-box-link, .-super-size.headline-box-link, .pricing-table-plan a.-super-size, button.-super-size, .button.-super-size, .module-cookiebar-opener a.-super-size, input[type="submit"].-super-size, input[type="reset"].-super-size, input[type="button"].-super-size {
   padding: 0.55556em 0.69444em;
   font-size: 2.4em;
   line-height: 1.00028;
 }
 @container (max-width: 700px) {
-  button.-super-size.-secondary, .-super-size.button.-secondary, .-super-size.-secondary.module-cookiebar-opener, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
-  .page-header .header-dropdown > ul input.-super-size[type=submit], .main-navigation-search-form button.-super-size, button.-super-size.-quaternary, .-super-size.button.-quaternary, .-super-size.-quaternary.module-cookiebar-opener, input.-super-size[type="submit"].-quaternary, .-super-size.feature-box-link, .-super-size.headline-box-link, .pricing-table-plan a.-super-size, button.-super-size, .button.-super-size, .-super-size.module-cookiebar-opener, input[type="submit"].-super-size, input[type="reset"].-super-size, input[type="button"].-super-size {
+  button.-super-size.-secondary, .-super-size.button.-secondary, .module-cookiebar-opener a.-super-size.-secondary, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
+  .page-header .header-dropdown > ul input.-super-size[type=submit], .main-navigation-search-form button.-super-size, button.-super-size.-quaternary, .-super-size.button.-quaternary, .module-cookiebar-opener a.-super-size.-quaternary, input.-super-size[type="submit"].-quaternary, .-super-size.feature-box-link, .-super-size.headline-box-link, .pricing-table-plan a.-super-size, button.-super-size, .button.-super-size, .module-cookiebar-opener a.-super-size, input[type="submit"].-super-size, input[type="reset"].-super-size, input[type="button"].-super-size {
     font-size: 1.86667em;
   }
 }
-.-highlight-color button.-secondary, .-highlight-color .button.-secondary, .-highlight-color .-secondary.module-cookiebar-opener, .-highlight-color input[type="submit"].-secondary, .-highlight-color .page-header .header-login .formbody input[type=submit], .page-header .header-login .formbody .-highlight-color input[type=submit],
+.-highlight-color button.-secondary, .-highlight-color .button.-secondary, .-highlight-color .module-cookiebar-opener a.-secondary, .module-cookiebar-opener .-highlight-color a.-secondary, .-highlight-color input[type="submit"].-secondary, .-highlight-color .page-header .header-login .formbody input[type=submit], .page-header .header-login .formbody .-highlight-color input[type=submit],
 .-highlight-color .page-header .header-dropdown > ul input[type=submit],
-.page-header .header-dropdown > ul .-highlight-color input[type=submit], .-highlight-color .main-navigation-search-form button, .main-navigation-search-form .-highlight-color button, .-highlight-color button.-quaternary, .-highlight-color .button.-quaternary, .-highlight-color .-quaternary.module-cookiebar-opener, .-highlight-color input[type="submit"].-quaternary, .-highlight-color .feature-box-link, .-highlight-color .headline-box-link, .-highlight-color .pricing-table-plan a, .pricing-table-plan .-highlight-color a, .-highlight-color button, .-highlight-color .button, .-highlight-color .module-cookiebar-opener, .-highlight-color input[type="submit"], .-highlight-color input[type="reset"], .-highlight-color input[type="button"] {
+.page-header .header-dropdown > ul .-highlight-color input[type=submit], .-highlight-color .main-navigation-search-form button, .main-navigation-search-form .-highlight-color button, .-highlight-color button.-quaternary, .-highlight-color .button.-quaternary, .-highlight-color .module-cookiebar-opener a.-quaternary, .module-cookiebar-opener .-highlight-color a.-quaternary, .-highlight-color input[type="submit"].-quaternary, .-highlight-color .feature-box-link, .-highlight-color .headline-box-link, .-highlight-color .pricing-table-plan a, .pricing-table-plan .-highlight-color a, .-highlight-color button, .-highlight-color .button, .-highlight-color .module-cookiebar-opener a, .module-cookiebar-opener .-highlight-color a, .-highlight-color input[type="submit"], .-highlight-color input[type="reset"], .-highlight-color input[type="button"] {
   color: #fff;
 }
 
-button, .button, .module-cookiebar-opener, input[type="submit"] {
+button, .button, .module-cookiebar-opener a, input[type="submit"] {
   border-radius: 5px;
 }
-button.-small, .button.-small, .-small.module-cookiebar-opener, input[type="submit"].-small {
+button.-small, .button.-small, .module-cookiebar-opener a.-small, input[type="submit"].-small {
   padding: 0.41667em 0.83333em;
   font-size: 0.8em;
 }
 
-button.-secondary, .button.-secondary, .-secondary.module-cookiebar-opener, input[type="submit"].-secondary, .page-header .header-login .formbody input[type=submit],
+button.-secondary, .button.-secondary, .module-cookiebar-opener a.-secondary, input[type="submit"].-secondary, .page-header .header-login .formbody input[type=submit],
 .page-header .header-dropdown > ul input[type=submit], .main-navigation-search-form button, .feature-box-link.-secondary, .headline-box-link.-secondary, .pricing-table-plan a.-secondary {
   padding: 0.92857em 1.28571em;
   border: 2px solid #242424;
@@ -10273,13 +10273,13 @@ button.-secondary, .button.-secondary, .-secondary.module-cookiebar-opener, inpu
   color: inherit;
   background: transparent;
 }
-button.-secondary:hover, .button.-secondary:hover, .-secondary.module-cookiebar-opener:hover, input[type="submit"].-secondary:hover, .page-header .header-login .formbody input[type=submit]:hover,
-.page-header .header-dropdown > ul input[type=submit]:hover, .main-navigation-search-form button:hover, .feature-box-link.-secondary:hover, .headline-box-link.-secondary:hover, .pricing-table-plan a.-secondary:hover, button.-secondary:focus, .button.-secondary:focus, .-secondary.module-cookiebar-opener:focus, input[type="submit"].-secondary:focus, .page-header .header-login .formbody input[type=submit]:focus,
+button.-secondary:hover, .button.-secondary:hover, .module-cookiebar-opener a.-secondary:hover, input[type="submit"].-secondary:hover, .page-header .header-login .formbody input[type=submit]:hover,
+.page-header .header-dropdown > ul input[type=submit]:hover, .main-navigation-search-form button:hover, .feature-box-link.-secondary:hover, .headline-box-link.-secondary:hover, .pricing-table-plan a.-secondary:hover, button.-secondary:focus, .button.-secondary:focus, .module-cookiebar-opener a.-secondary:focus, input[type="submit"].-secondary:focus, .page-header .header-login .formbody input[type=submit]:focus,
 .page-header .header-dropdown > ul input[type=submit]:focus, .main-navigation-search-form button:focus, .feature-box-link.-secondary:focus, .headline-box-link.-secondary:focus, .pricing-table-plan a.-secondary:focus {
   background-color: transparent;
 }
-button.-secondary:hover:after, .button.-secondary:hover:after, .-secondary.module-cookiebar-opener:hover:after, input[type="submit"].-secondary:hover:after, .page-header .header-login .formbody input[type=submit]:hover:after,
-.page-header .header-dropdown > ul input[type=submit]:hover:after, .main-navigation-search-form button:hover:after, .feature-box-link.-secondary:hover:after, .headline-box-link.-secondary:hover:after, .pricing-table-plan a.-secondary:hover:after, button.-secondary:focus:after, .button.-secondary:focus:after, .-secondary.module-cookiebar-opener:focus:after, input[type="submit"].-secondary:focus:after, .page-header .header-login .formbody input[type=submit]:focus:after,
+button.-secondary:hover:after, .button.-secondary:hover:after, .module-cookiebar-opener a.-secondary:hover:after, input[type="submit"].-secondary:hover:after, .page-header .header-login .formbody input[type=submit]:hover:after,
+.page-header .header-dropdown > ul input[type=submit]:hover:after, .main-navigation-search-form button:hover:after, .feature-box-link.-secondary:hover:after, .headline-box-link.-secondary:hover:after, .pricing-table-plan a.-secondary:hover:after, button.-secondary:focus:after, .button.-secondary:focus:after, .module-cookiebar-opener a.-secondary:focus:after, input[type="submit"].-secondary:focus:after, .page-header .header-login .formbody input[type=submit]:focus:after,
 .page-header .header-dropdown > ul input[type=submit]:focus:after, .main-navigation-search-form button:focus:after, .feature-box-link.-secondary:focus:after, .headline-box-link.-secondary:focus:after, .pricing-table-plan a.-secondary:focus:after {
   content: "";
   position: absolute;
@@ -10290,30 +10290,30 @@ button.-secondary:hover:after, .button.-secondary:hover:after, .-secondary.modul
   background: currentColor;
   opacity: 0.2;
 }
-button.-secondary:active, .button.-secondary:active, .-secondary.module-cookiebar-opener:active, input[type="submit"].-secondary:active, .page-header .header-login .formbody input[type=submit]:active,
+button.-secondary:active, .button.-secondary:active, .module-cookiebar-opener a.-secondary:active, input[type="submit"].-secondary:active, .page-header .header-login .formbody input[type=submit]:active,
 .page-header .header-dropdown > ul input[type=submit]:active, .main-navigation-search-form button:active, .feature-box-link.-secondary:active, .headline-box-link.-secondary:active, .pricing-table-plan a.-secondary:active {
   background-color: transparent;
 }
-button.-secondary:active:after, .button.-secondary:active:after, .-secondary.module-cookiebar-opener:active:after, input[type="submit"].-secondary:active:after, .page-header .header-login .formbody input[type=submit]:active:after,
+button.-secondary:active:after, .button.-secondary:active:after, .module-cookiebar-opener a.-secondary:active:after, input[type="submit"].-secondary:active:after, .page-header .header-login .formbody input[type=submit]:active:after,
 .page-header .header-dropdown > ul input[type=submit]:active:after, .main-navigation-search-form button:active:after, .feature-box-link.-secondary:active:after, .headline-box-link.-secondary:active:after, .pricing-table-plan a.-secondary:active:after {
   opacity: 0.1;
 }
-button.-large.-secondary, .-large.button.-secondary, .-large.-secondary.module-cookiebar-opener, input.-large[type="submit"].-secondary, .page-header .header-login .formbody input.-large[type=submit],
-.page-header .header-dropdown > ul input.-large[type=submit], .main-navigation-search-form button.-large, .-large.feature-box-link.-secondary, .-large.headline-box-link.-secondary, .pricing-table-plan a.-large.-secondary, button.-super-size.-secondary, .-super-size.button.-secondary, .-super-size.-secondary.module-cookiebar-opener, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
+button.-large.-secondary, .-large.button.-secondary, .module-cookiebar-opener a.-large.-secondary, input.-large[type="submit"].-secondary, .page-header .header-login .formbody input.-large[type=submit],
+.page-header .header-dropdown > ul input.-large[type=submit], .main-navigation-search-form button.-large, .-large.feature-box-link.-secondary, .-large.headline-box-link.-secondary, .pricing-table-plan a.-large.-secondary, button.-super-size.-secondary, .-super-size.button.-secondary, .module-cookiebar-opener a.-super-size.-secondary, input.-super-size[type="submit"].-secondary, .page-header .header-login .formbody input.-super-size[type=submit],
 .page-header .header-dropdown > ul input.-super-size[type=submit], .main-navigation-search-form button.-super-size, .-super-size.feature-box-link.-secondary, .-super-size.headline-box-link.-secondary, .pricing-table-plan a.-super-size.-secondary {
   border-width: 3px;
 }
 
-button.-quaternary, .button.-quaternary, .-quaternary.module-cookiebar-opener, input[type="submit"].-quaternary {
+button.-quaternary, .button.-quaternary, .module-cookiebar-opener a.-quaternary, input[type="submit"].-quaternary {
   padding: 0.92857em 1.28571em;
   color: #fff;
   background: #855dc9;
 }
-button.-quaternary:hover, .button.-quaternary:hover, .-quaternary.module-cookiebar-opener:hover, input[type="submit"].-quaternary:hover, button.-quaternary:focus, .button.-quaternary:focus, .-quaternary.module-cookiebar-opener:focus, input[type="submit"].-quaternary:focus {
+button.-quaternary:hover, .button.-quaternary:hover, .module-cookiebar-opener a.-quaternary:hover, input[type="submit"].-quaternary:hover, button.-quaternary:focus, .button.-quaternary:focus, .module-cookiebar-opener a.-quaternary:focus, input[type="submit"].-quaternary:focus {
   opacity: .6;
   background: #855dc9;
 }
-button.-quaternary:hover:after, .button.-quaternary:hover:after, .-quaternary.module-cookiebar-opener:hover:after, input[type="submit"].-quaternary:hover:after, button.-quaternary:focus:after, .button.-quaternary:focus:after, .-quaternary.module-cookiebar-opener:focus:after, input[type="submit"].-quaternary:focus:after {
+button.-quaternary:hover:after, .button.-quaternary:hover:after, .module-cookiebar-opener a.-quaternary:hover:after, input[type="submit"].-quaternary:hover:after, button.-quaternary:focus:after, .button.-quaternary:focus:after, .module-cookiebar-opener a.-quaternary:focus:after, input[type="submit"].-quaternary:focus:after {
   content: "";
   position: absolute;
   top: 0;
@@ -10323,17 +10323,17 @@ button.-quaternary:hover:after, .button.-quaternary:hover:after, .-quaternary.mo
   background: currentColor;
   opacity: 0.2;
 }
-button.-quaternary:active, .button.-quaternary:active, .-quaternary.module-cookiebar-opener:active, input[type="submit"].-quaternary:active {
+button.-quaternary:active, .button.-quaternary:active, .module-cookiebar-opener a.-quaternary:active, input[type="submit"].-quaternary:active {
   background-color: transparent;
 }
-button.-quaternary:active:after, .button.-quaternary:active:after, .-quaternary.module-cookiebar-opener:active:after, input[type="submit"].-quaternary:active:after {
+button.-quaternary:active:after, .button.-quaternary:active:after, .module-cookiebar-opener a.-quaternary:active:after, input[type="submit"].-quaternary:active:after {
   opacity: 0.1;
 }
-button.-large.-quaternary, .-large.button.-quaternary, .-large.-quaternary.module-cookiebar-opener, input.-large[type="submit"].-quaternary, button.-super-size.-quaternary, .-super-size.button.-quaternary, .-super-size.-quaternary.module-cookiebar-opener, input.-super-size[type="submit"].-quaternary {
+button.-large.-quaternary, .-large.button.-quaternary, .module-cookiebar-opener a.-large.-quaternary, input.-large[type="submit"].-quaternary, button.-super-size.-quaternary, .-super-size.button.-quaternary, .module-cookiebar-opener a.-super-size.-quaternary, input.-super-size[type="submit"].-quaternary {
   border-width: 3px;
 }
 
-button.-tertiary, .button.-tertiary, .-tertiary.module-cookiebar-opener, input[type="submit"].-tertiary {
+button.-tertiary, .button.-tertiary, .module-cookiebar-opener a.-tertiary, input[type="submit"].-tertiary {
   padding: 0;
   font-size: 1.6em;
   letter-spacing: normal;
@@ -10342,30 +10342,30 @@ button.-tertiary, .button.-tertiary, .-tertiary.module-cookiebar-opener, input[t
   background: none;
   color: #000;
 }
-button.-small.-tertiary, .-small.button.-tertiary, .-small.-tertiary.module-cookiebar-opener, input.-small[type="submit"].-tertiary {
+button.-small.-tertiary, .-small.button.-tertiary, .module-cookiebar-opener a.-small.-tertiary, input.-small[type="submit"].-tertiary {
   font-size: 0.93333em;
   line-height: 1.42929;
 }
-button.-medium.-tertiary, .-medium.button.-tertiary, .-medium.-tertiary.module-cookiebar-opener, input.-medium[type="submit"].-tertiary {
+button.-medium.-tertiary, .-medium.button.-tertiary, .module-cookiebar-opener a.-medium.-tertiary, input.-medium[type="submit"].-tertiary {
   font-size: 1.2em;
   line-height: 1.11167;
 }
-button.-large.-tertiary, .-large.button.-tertiary, .-large.-tertiary.module-cookiebar-opener, input.-large[type="submit"].-tertiary {
+button.-large.-tertiary, .-large.button.-tertiary, .module-cookiebar-opener a.-large.-tertiary, input.-large[type="submit"].-tertiary {
   font-size: 1.4em;
   line-height: 0.95286;
 }
-button.-super-size.-tertiary, .-super-size.button.-tertiary, .-super-size.-tertiary.module-cookiebar-opener, input.-super-size[type="submit"].-tertiary {
+button.-super-size.-tertiary, .-super-size.button.-tertiary, .module-cookiebar-opener a.-super-size.-tertiary, input.-super-size[type="submit"].-tertiary {
   font-size: 2.4em;
   line-height: 1.00028;
 }
-button.-tertiary:before, .button.-tertiary:before, .-tertiary.module-cookiebar-opener:before, input[type="submit"].-tertiary:before {
+button.-tertiary:before, .button.-tertiary:before, .module-cookiebar-opener a.-tertiary:before, input[type="submit"].-tertiary:before {
   top: -2px;
   font-size: 60%;
 }
-.-color-inverted button.-tertiary, .-color-inverted .button.-tertiary, .-color-inverted .-tertiary.module-cookiebar-opener, .-color-inverted input[type="submit"].-tertiary {
+.-color-inverted button.-tertiary, .-color-inverted .button.-tertiary, .-color-inverted .module-cookiebar-opener a.-tertiary, .module-cookiebar-opener .-color-inverted a.-tertiary, .-color-inverted input[type="submit"].-tertiary {
   color: #fff;
 }
-button.-tertiary:hover, .button.-tertiary:hover, .-tertiary.module-cookiebar-opener:hover, input[type="submit"].-tertiary:hover, button.-tertiary:focus, .button.-tertiary:focus, .-tertiary.module-cookiebar-opener:focus, input[type="submit"].-tertiary:focus {
+button.-tertiary:hover, .button.-tertiary:hover, .module-cookiebar-opener a.-tertiary:hover, input[type="submit"].-tertiary:hover, button.-tertiary:focus, .button.-tertiary:focus, .module-cookiebar-opener a.-tertiary:focus, input[type="submit"].-tertiary:focus {
   color: #090909;
 }
 
@@ -13834,7 +13834,7 @@ label .captcha_text {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
-.fading-boxes-item-link .button, .fading-boxes-item-link .module-cookiebar-opener {
+.fading-boxes-item-link .button, .fading-boxes-item-link .module-cookiebar-opener a, .module-cookiebar-opener .fading-boxes-item-link a {
   display: block;
 }
 
@@ -14666,7 +14666,7 @@ label .captcha_text {
 .typing-headline.-align-right > p {
   margin-right: 0;
 }
-.typing-headline h2 + .button, .typing-headline h2 + .module-cookiebar-opener, .typing-headline h3 + .button, .typing-headline h3 + .module-cookiebar-opener {
+.typing-headline h2 + .button, .typing-headline .module-cookiebar-opener h2 + a, .module-cookiebar-opener .typing-headline h2 + a, .typing-headline h3 + .button, .typing-headline .module-cookiebar-opener h3 + a, .module-cookiebar-opener .typing-headline h3 + a {
   margin-top: 2.4em;
 }
 
@@ -18179,7 +18179,7 @@ body.home .main-navigation .home {
   margin: 1px;
 }
 
-.mod_newscategories .button, .mod_newscategories .module-cookiebar-opener {
+.mod_newscategories .button, .mod_newscategories .module-cookiebar-opener a, .module-cookiebar-opener .mod_newscategories a {
   display: inline-block;
   margin-bottom: 2px;
 }
@@ -18187,6 +18187,9 @@ body.home .main-navigation .home {
 form select {
   padding: 10px;
   border-color: #cecece;
+}
+form .honeyshow {
+  display: none;
 }
 
 .footer-copyright {
@@ -18279,16 +18282,22 @@ form select {
 /* ===========================================
 * CookieBar
 * ======================================== */
+.contao-cookiebar {
+  right: auto;
+  left: 0;
+}
 .contao-cookiebar button.cc-detail-btn:focus, .contao-cookiebar button.cc-detail-btn-details:focus {
   background: none;
 }
 
 .module-cookiebar-opener {
-  color: #fff;
   position: fixed;
   bottom: 5px;
-  right: 5px;
+  left: 5px;
   z-index: 100;
+}
+.module-cookiebar-opener a {
+  color: #fff;
 }
 
 /* ===========================================
@@ -18361,7 +18370,6 @@ h1, h2 {
 
 .headline-box.h2 .headline, .headline-box.h2 .subheadline, .headline-box.h1 .headline, .headline-box.h1 .subheadline {
   line-height: 1;
-  font-size: 1.8em;
   font-weight: 400;
 }
 .headline-box.h2 .headline span, .headline-box.h2 .subheadline span, .headline-box.h1 .headline span, .headline-box.h1 .subheadline span {
@@ -18382,8 +18390,18 @@ h1, h2 {
 .headline-box.h1 {
   font-size: 3em !important;
 }
+@media screen and (max-width: 1000px) {
+  .headline-box.h1 {
+    font-size: 2.5em !important;
+  }
+}
 .headline-box.h2 {
-  font-size: 2em !important;
+  font-size: 3em !important;
+}
+@media screen and (max-width: 1000px) {
+  .headline-box.h2 {
+    font-size: 2.5em !important;
+  }
 }
 .headline-box:after {
   display: none;
@@ -18399,13 +18417,64 @@ h1, h2 {
   }*/
 }
 .snap-scroll .snap-section {
-  height: 100vh;
   padding-top: 100px;
+  min-height: 800px;
+}
+@media screen and (min-width: 1001px) {
+  .snap-scroll .snap-section {
+    height: 100vh;
+  }
+}
+.snap-scroll .snap-section.snap-100 .centered-wrapper-inner,
+.snap-scroll .snap-section.snap-100 .rs-columns-master,
+.snap-scroll .snap-section.snap-100 .rs-columns,
+.snap-scroll .snap-section.snap-100 .news-image-teaser,
+.snap-scroll .snap-section.snap-100 .rs-column,
+.snap-scroll .snap-section.snap-100 .centered-wrapper,
+.snap-scroll .snap-section.snap-100 .content-image,
+.snap-scroll .snap-section.snap-100 .content-image figure {
+  height: 100% !important;
+}
+.snap-scroll .snap-section.snap-100 .content-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.snap-scroll .snap-section.snap-100 .content-image figure img {
+  max-height: 600px;
+}
+.snap-scroll .snap-section .gap-10 {
+  gap: 10px !important;
+}
+.snap-scroll .snap-section .gap-10 .rs-column {
+  flex-grow: 1 !important;
+}
+.snap-scroll .snap-section .column-80 .rs-column {
+  height: 80% !important;
+}
+.snap-scroll .snap-section .headline-box {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1001px) {
+  .snap-scroll .snap-section .headline-box {
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
 }
 .snap-scroll .main-content > .mod_article:first-child .snap-section {
   height: calc(100vh - 195px);
 }
 
+.centered-wrapper.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+}
 .centered-wrapper.is-animated .centered-wrapper-inner .fade-up {
   opacity: 0;
   transform: translateY(50px);
@@ -18461,18 +18530,26 @@ h1, h2 {
   min-height: calc(100vh - 300px);
 }
 
-.text-type2 {
+@media screen and (max-width: 1000px) {
+  .content-text {
+    font-size: .9em;
+  }
+}
+.content-text.text-type2 {
   font-size: 1.6em;
   line-height: 1.1;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: italic;
 }
-.text-type2 p {
+.content-text.text-type2 p {
   margin: 0 0 25px;
 }
-.text-type2 p:last-child {
+.content-text.text-type2 p:last-child {
   margin-bottom: 0;
+}
+.content-text .rte p:last-child {
+  margin-bottom: 0 !important;
 }
 
 .ambilight .master-wrapper .centered-wrapper-background {

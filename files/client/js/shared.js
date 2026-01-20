@@ -6,101 +6,57 @@ var hideDataFrontEndHelper = function(){
     });
 };
 
+var initHomeScroll = function() {
+    if ($('body').hasClass('home')) {
+        $('.page-header .main-navigation .level_1 > li.home > .home').off('click').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
+        });
+    }
+};
+
 var scrollClass = function(){
-    var y = $(window).scrollTop(); // Correction ici : $(window) est plus fiable
+    var y = $(window).scrollTop(); 
     if (y > 200) {
         $("body").addClass("scroll");
     } else {
         $("body").removeClass("scroll");
     }
-}
-function animateHeadline(headlineElement) {
-    const $headline = $(headlineElement);
-    if ($headline.find('.char').length > 0) return;
-
-    $headline.css('opacity', '0');
-
-    let headlineHTML = $headline.html()
-        .replace(/[\n\t]/g, '') 
-        .replace(/<br>/gi, ' <span class="br-forcer"></span> '); 
-    $headline.html(headlineHTML);
-
-    $headline.lettering('words');
-    $headline.find('span').lettering();
-
-    const letters = $headline.find('span').find('span'); 
-    const tl = gsap.timeline();
-
-    tl.from(letters, {
-        opacity: 0,
-        y: (i, target) => gsap.utils.random(-100, -200), 
-        x: (i, target) => gsap.utils.random(-50, 50), 
-        rotation: (i, target) => gsap.utils.random(-90, 90), 
-        scale: 0.8,
-        transformOrigin: "50% 50%",
-        stagger: {
-            each: 0.08,        // ⬅️ AUGMENTER (était à 0.03) : plus de temps entre chaque lettre
-            from: "random" 
-        },
-        duration: 1.5,         // ⬅️ AUGMENTER (était à 0.8) : chaque lettre met plus de temps à tomber
-        ease: "power2.out", 
-    });
-
-    tl.to($headline, { opacity: 1, duration: 1.2, ease: "power2.out" }, 0); 
-}
-// 2. Déclencheur au scroll (IntersectionObserver)
-var scrollInView = function() {
-    const animatedElements = document.querySelectorAll('.headline-box.ce_rsce_client_headline_box_custom');
-
-    // Initialisation de ScrollTrigger si dispo
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-    }
-    
-    const observerOptions = {
-        root: null,
-        threshold: 0.2 
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // On récupère tous les titres et sous-titres dans l'élément observé
-                const elementsToAnimate = entry.target.querySelectorAll('.headline, .subheadline');
-                
-                elementsToAnimate.forEach(el => {
-                    animateHeadline(el);
-                });
-
-                observer.unobserve(entry.target); 
-            }
-        });
-    }, observerOptions);
-
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
 };
+
+// On sort la fonction de gestion du wheel pour pouvoir la supprimer proprement
+var handleSnapWheel;
+
 var initSnapScroll = function() {
     var $sections = $('.snap-section');
+    var $window = $(window);
     
-    // CONDITION DE SÉCURITÉ : 
-    // S'il n'y a pas de sections ou une seule, on n'active pas le script.
-    if ($sections.length <= 1) return;
+    // Suppression de l'ancien écouteur s'il existe (pour le resize)
+    if (handleSnapWheel) {
+        window.removeEventListener('wheel', handleSnapWheel);
+    }
+
+    // CONDITIONS DE SÉCURITÉ :
+    // 1. Assez de sections
+    // 2. Largeur >= 700px
+    // 3. Hauteur >= 800px
+    if ($sections.length <= 1 || $window.width() < 700 || $window.height() < 700) {
+        return;
+    }
 
     var speed = 1500;
     var tolerance = 50;
     var isScrolling = false;
 
-    window.addEventListener('wheel', function(e) {
-        if (!$('body').hasClass('snap-scroll')) return;
+    handleSnapWheel = function(e) {
+        // Vérification dynamique (au cas où le snap-scroll est retiré du body)
+        if (!$('body').hasClass('snap-scroll') || $window.width() < 700 || $window.height() < 800) return;
         
         var delta = e.deltaY;
         var direction = delta > 0 ? 1 : -1;
-        var scrollTop = Math.round($(window).scrollTop());
+        var scrollTop = Math.round($window.scrollTop());
         var lastSectionTop = Math.round($sections.last().offset().top);
 
-        // 1. SORTIE BAS DE PAGE : On laisse le scroll naturel après le dernier snap
         if (direction === 1 && scrollTop >= lastSectionTop - tolerance) return;
 
         e.preventDefault();
@@ -108,7 +64,6 @@ var initSnapScroll = function() {
 
         var targetScroll = -1;
 
-        // 2. NAVIGATION VERS LE BAS
         if (direction === 1) {
             if (scrollTop <= tolerance) {
                 targetScroll = Math.round($sections.eq(1).offset().top);
@@ -122,54 +77,68 @@ var initSnapScroll = function() {
                 });
             }
         } 
-        // 3. NAVIGATION VERS LE HAUT
         else {
+            var found = false;
             $($sections.get().reverse()).each(function() {
                 var sectionTop = Math.round($(this).offset().top);
+                // On cherche la première section dont le top est significativement 
+                // au-dessus de la position actuelle du scroll
                 if (sectionTop < scrollTop - tolerance) {
-                    targetScroll = $(this).is($sections.first()) ? 0 : sectionTop;
+                    targetScroll = sectionTop;
+                    found = true;
                     return false; 
                 }
             });
-            if (targetScroll === -1 && scrollTop > 0) targetScroll = 0;
+            
+            // Si on est entre le haut de page et la première section
+            if (!found && scrollTop > tolerance) {
+                targetScroll = 0;
+            }
         }
 
-        // 4. EXÉCUTION
         if (targetScroll !== -1) {
             isScrolling = true;
             $('html, body').stop().animate({ scrollTop: targetScroll }, speed, 'swing', function() {
                 setTimeout(function() { isScrolling = false; }, 150);
             });
         }
-    }, { passive: false });
+    };
+
+    window.addEventListener('wheel', handleSnapWheel, { passive: false });
 };
 
 var scrollAnchor = function(){
     var $viewport = $('html, body');
-
-    $(".link-animate a, .link-animate").click(function (event) {
+    $(".link-animate a, .link-animate").off('click').on('click', function (event) {
         event.preventDefault();
         var full_url = this.href;
         var parts = full_url.split("#");
         var trgt = parts[1];
-
         var offset_value = $(".header-navigation").outerHeight() - 1;
         var target_offset = $("#" + trgt).offset();
         var target_top = target_offset.top - offset_value;
 
         $viewport.animate({scrollTop: target_top}, 500, 'swing');
-
         $viewport.bind("scroll mousedown DOMMouseScroll mousewheel keyup", function () {
             $viewport.stop();
         });
     });
 };
 
+var resizeTimer;
+$(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        initSnapScroll(); 
+    }, 250);
+});
+
 $(document).ready(function () {
     scrollAnchor();
     scrollClass();
-    initSnapScroll(); // Activation du snap
-    scrollInView();
+    initSnapScroll();
+    initHomeScroll();
+    if (typeof scrollInView === "function") scrollInView(); 
 });
 
 $(window).on('load', function () {

@@ -310,6 +310,9 @@ form {
         padding: 10px;
         border-color: $grey-medium;
     }
+    .honeyshow{
+        display: none;
+    }
 }
 
 .footer-copyright {
@@ -430,6 +433,8 @@ form {
 * CookieBar
 * ======================================== */
 .contao-cookiebar {
+    right: auto; 
+    left: 0;
     button {
 
         &.cc-detail-btn,
@@ -442,12 +447,14 @@ form {
 }
 
 .module-cookiebar-opener {
-    color: $white;
     position: fixed;
     bottom: 5px;
-    right: 5px;
+    left: 5px;
     z-index: 100;
-    @extend .button;
+    a{
+        color: $white;
+        @extend .button;
+    }
 }
 
 /* ===========================================
@@ -518,6 +525,6 @@ form {
     .page-header {
         .main-navigation-search {
             right: 65px !important;
-        }
+        } 
     }
 }
