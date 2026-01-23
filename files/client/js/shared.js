@@ -40,7 +40,7 @@ var initSnapScroll = function() {
     // 1. Assez de sections
     // 2. Largeur >= 700px
     // 3. Hauteur >= 800px
-    if ($sections.length <= 1 || $window.width() < 700 || $window.height() < 700) {
+    if ($sections.length <= 1 || $window.width() < 700 || $window.height() < 800) {
         return;
     }
 
@@ -81,10 +81,14 @@ var initSnapScroll = function() {
             var found = false;
             $($sections.get().reverse()).each(function() {
                 var sectionTop = Math.round($(this).offset().top);
-                // On cherche la première section dont le top est significativement 
-                // au-dessus de la position actuelle du scroll
+                
                 if (sectionTop < scrollTop - tolerance) {
-                    targetScroll = sectionTop;
+                    // SI C'EST LA PREMIÈRE SECTION (index 0), ON FORCE LE 0
+                    if ($(this).is($sections.first())) {
+                        targetScroll = 0;
+                    } else {
+                        targetScroll = sectionTop;
+                    }
                     found = true;
                     return false; 
                 }
