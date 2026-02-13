@@ -18764,7 +18764,6 @@ body.home .main-navigation .home {
   display: block;
 }
 body.home .header-navigation {
-  padding-top: 40px;
   transition: padding-top 0.3s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
