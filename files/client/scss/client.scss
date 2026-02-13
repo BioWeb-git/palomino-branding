@@ -10,10 +10,11 @@ h1,
 h2 {
     font-size: 1em !important;
     font-weight: 300;
-    font-style: italic;
+    font-style: italic; 
 }
 .main-content h1{
-    font-size: 6em !important;
+    font-size: 5em !important;
+    margin-bottom: 0;
     @include mediaquery(tablet) {
         font-size: 3em !important;
      }
