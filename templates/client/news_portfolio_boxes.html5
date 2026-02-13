@@ -1,5 +1,5 @@
 <?php
-	dump($this->arrData);
+	
 	$config = array(
 		'large' => array('-large-col-3-1 -large-first', '-large-col-3-1', '-large-col-3-1 -large-last'),
 		'medium' => array('-medium-col-2-1 -medium-first', '-medium-col-2-1 -medium-last'),
