@@ -18372,7 +18372,7 @@ h2 {
 }
 
 .main-content h1 {
-  font-size: 5em !important;
+  font-size: 4rem !important;
   margin-bottom: 0;
 }
 @media screen and (max-width: 1000px) {
