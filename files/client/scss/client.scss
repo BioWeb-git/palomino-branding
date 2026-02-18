@@ -671,3 +671,18 @@ form {
         }
     }
 }
+.page-footer{
+    padding-top: 0;
+    .mod_rocksolid_slider{
+        margin: 100px 0;
+        h2{ 
+            font-size: 3em !important; 
+            margin-bottom: 50px; 
+        }
+        .rsts-slide{
+            img{
+                padding: 10px;
+            }
+        }
+    }
+}

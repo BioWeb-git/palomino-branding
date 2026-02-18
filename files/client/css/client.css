@@ -18377,7 +18377,7 @@ h2 {
 }
 @media screen and (max-width: 1000px) {
   .main-content h1 {
-    font-size: 3em !important;
+    font-size: 3rem !important;
   }
 }
 
@@ -18927,4 +18927,18 @@ form.contact-form .rs-columns .rs-column, form.contact-form .news-image-teaser .
   .mod_newslist.three-col .news-image-teaser {
     width: calc(33.33333% - (2em * 2 / 3));
   }
+}
+
+.page-footer {
+  padding-top: 0;
+}
+.page-footer .mod_rocksolid_slider {
+  margin: 100px 0;
+}
+.page-footer .mod_rocksolid_slider h2 {
+  font-size: 3em !important;
+  margin-bottom: 50px;
+}
+.page-footer .mod_rocksolid_slider .rsts-slide img {
+  padding: 10px;
 }
