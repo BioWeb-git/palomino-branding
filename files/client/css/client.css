@@ -16,7 +16,7 @@
 
 .font2, .headline-box.h2 .headline,
 .headline-box.h2 .subheadline, .headline-box.h1 .headline,
-.headline-box.h1 .subheadline, .content-text.text-type2 {
+.headline-box.h1 .subheadline, .content-text.text-type2, .main-navigation-mobile {
   font-family: Noto Serif Display, serif !important;
 }
 
@@ -11428,9 +11428,9 @@ li:hover > .page-header .mega-dropdown {
   padding-top: var(--safe-area-top);
   padding-bottom: var(--safe-area-bottom);
   padding-left: var(--safe-area-left);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-  background: #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  background: #fff;
 }
 @media screen and (max-width: 700px) {
   .main-navigation-mobile {
@@ -11488,7 +11488,7 @@ li:hover > .page-header .mega-dropdown {
   padding: 0;
 }
 .main-navigation-mobile ul ul {
-  background: #000;
+  background: #fff;
   box-shadow: inset 0 40px 40px -20px rgba(0, 0, 0, 0.04), inset 0 -40px 40px -20px rgba(0, 0, 0, 0.04);
 }
 .main-navigation-mobile .is-collapsed > ul {
@@ -11504,9 +11504,9 @@ li:hover > .page-header .mega-dropdown {
 .main-navigation-mobile a, .main-navigation-mobile strong, .main-navigation-mobile span.active, .main-navigation-mobile span.trail, .main-navigation-mobile span.forward {
   display: block;
   padding: 0.64286em 0.92857em 0.57143em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: inherit;
-  background-color: #000;
+  background-color: #fff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   transition: background-color 0.6s ease-out;
 }
@@ -11521,7 +11521,7 @@ li:hover > .page-header .mega-dropdown {
 .main-navigation-mobile a:hover, .main-navigation-mobile a:focus, .main-navigation-mobile strong:hover, .main-navigation-mobile strong:focus, .main-navigation-mobile span.active:hover, .main-navigation-mobile span.active:focus, .main-navigation-mobile span.trail:hover, .main-navigation-mobile span.trail:focus, .main-navigation-mobile span.forward:hover, .main-navigation-mobile span.forward:focus {
   outline: none;
   text-decoration: none;
-  background-color: black;
+  background-color: #f2f2f2;
   transition: background-color 0.2s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -11533,11 +11533,11 @@ li:hover > .page-header .mega-dropdown {
   font-weight: bold;
 }
 .main-navigation-mobile a.active, .main-navigation-mobile strong.active, .main-navigation-mobile span.active {
-  background-color: #141414;
-  box-shadow: inset 0 0 5px #000;
+  background-color: white;
+  box-shadow: inset 0 0 5px #fff;
 }
 .main-navigation-mobile li li {
-  color: #bfbfbf;
+  color: black;
 }
 .main-navigation-mobile li li a, .main-navigation-mobile li li strong, .main-navigation-mobile li li span.active, .main-navigation-mobile li li span.trail, .main-navigation-mobile li li span.forward {
   padding-left: 1.85714em;
@@ -11560,7 +11560,7 @@ li:hover > .page-header .mega-dropdown {
   padding: 0.57143em 0.92857em;
   border: solid transparent;
   border-width: 0.21429em 0;
-  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 1px 0 rgba(31, 31, 31, 0.1);
   border-radius: 0;
   outline: none;
   line-height: 0;
@@ -11593,7 +11593,7 @@ li:hover > .page-header .mega-dropdown {
 }
 .main-navigation-mobile .main-navigation-search input, .main-navigation-mobile .main-navigation-search input:hover, .main-navigation-mobile .main-navigation-search input:focus {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: transparent;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
 }
@@ -11645,7 +11645,7 @@ li:hover > .page-header .mega-dropdown {
 }
 .main-navigation-mobile .secondary-navigation li > a, .main-navigation-mobile .secondary-navigation li > span {
   padding: 0.64286em 0.92857em 0.57143em;
-  color: #fff;
+  color: #000;
 }
 
 .main-navigation-mobile-icons.main-navigation-mobile-icons {
@@ -11669,7 +11669,7 @@ li:hover > .page-header .mega-dropdown {
   font-size: 1.28571em;
   line-height: 2.22278;
   margin: 0 0 100%;
-  color: #fff !important;
+  color: #000 !important;
 }
 .main-navigation-mobile-icons.main-navigation-mobile-icons a:hover:before {
   color: inherit !important;
@@ -19018,4 +19018,8 @@ form.contact-form .rs-columns .rs-column, form.contact-form .news-image-teaser .
 }
 .page-footer .mod_rocksolid_slider .rsts-slide img {
   padding: 10px;
+}
+
+.main-navigation-mobile {
+  font-size: 2em;
 }
