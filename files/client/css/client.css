@@ -18396,6 +18396,46 @@ form .honeyshow {
   text-align: right;
 }
 
+.content-vimeo figure {
+  margin: 0 auto;
+  width: 100%;
+}
+.content-vimeo iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 4px solid #333;
+}
+.content-vimeo.r-9-16 iframe {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+}
+.content-vimeo.r-16-9 iframe {
+  aspect-ratio: 16 / 9;
+  max-width: 600px;
+}
+.content-vimeo.r-6-4 iframe {
+  aspect-ratio: 6 / 4;
+  max-width: 600px;
+}
+.content-vimeo.r-3-4 iframe {
+  aspect-ratio: 3 / 4;
+  max-width: 360px;
+}
+.content-vimeo.r-4-3 iframe {
+  aspect-ratio: 4 / 3;
+  max-width: 600px;
+}
+.content-vimeo.r-3-2 iframe {
+  aspect-ratio: 3 / 2;
+  max-width: 600px;
+}
+.content-vimeo.r-2-3 iframe {
+  aspect-ratio: 2 / 3;
+  max-width: 360px;
+}
+
 .text-intro {
   font-size: 1.3em;
 }
