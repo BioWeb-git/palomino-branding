@@ -535,15 +535,26 @@ form {
 }
 .content-vimeo{
     text-align: center;
-    iframe{ 
-        border: 15px solid #ffffff;
-        box-shadow: 4px 6px 25px #00000040;
+    figure{
+        max-width: 600px;
+        margin: 0 auto;
+        iframe{ 
+            border: 1px solid $grey-light;
+            margin-bottom: 25px; 
+        }
     }
 }
 .layout_full{
+    position: relative;
     .content-gallery{
         ul{
             justify-content: center;
         }
+    }
+    .link-back{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px;
     }
 }

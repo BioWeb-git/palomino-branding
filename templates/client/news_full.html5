@@ -1,6 +1,6 @@
 <div class="layout_full block<?= $this->class ?>">
-
   <h1><?= $this->newsHeadline ?></h1>
+  <a class="link-back button" href="{{link_url::308}}">Retour</a>
   <?php if ($this->categories && is_array($this->categories)) : ?>
     <div class="news-boxed-categories">
         <?php
