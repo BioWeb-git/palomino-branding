@@ -17986,7 +17986,7 @@ nav[data-pagination] li .current, nav[data-pagination] li .active,
 }
 
 a:hover, a:focus {
-  outline: nones;
+  outline: none;
 }
 
 .ext-pdf a {
@@ -18383,10 +18383,17 @@ form .honeyshow {
   justify-content: center;
 }
 .layout_full .link-back {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 5px;
+  margin-top: 65px;
+  position: relative;
+  top: 10px;
+  display: block;
+}
+.layout_full .link-back:before {
+  content: '←';
+  margin-right: 5px;
+}
+.layout_full .link-back.link-back-bottom {
+  text-align: right;
 }
 
 .text-intro {
