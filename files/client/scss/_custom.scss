@@ -16,6 +16,11 @@
 .tagline {
     container-type: inline-size;
 }
+a{
+    &:hover, &:focus{
+        outline: nones; 
+    }
+}
 .ext-pdf a{
     display: inline-block;
 }

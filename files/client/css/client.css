@@ -17985,6 +17985,10 @@ nav[data-pagination] li .current, nav[data-pagination] li .active,
   container-type: inline-size;
 }
 
+a:hover, a:focus {
+  outline: nones;
+}
+
 .ext-pdf a {
   display: inline-block;
 }
