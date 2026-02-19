@@ -528,3 +528,17 @@ form {
         } 
     }
 }
+.content-vimeo{
+    text-align: center;
+    iframe{ 
+        border: 15px solid #ffffff;
+        box-shadow: 4px 6px 25px #00000040;
+    }
+}
+.layout_full{
+    .content-gallery{
+        ul{
+            justify-content: center;
+        }
+    }
+}

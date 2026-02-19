@@ -18360,6 +18360,18 @@ form .honeyshow {
     right: 65px !important;
   }
 }
+.content-vimeo {
+  text-align: center;
+}
+.content-vimeo iframe {
+  border: 15px solid #ffffff;
+  box-shadow: 4px 6px 25px #00000040;
+}
+
+.layout_full .content-gallery ul {
+  justify-content: center;
+}
+
 .text-intro {
   font-size: 1.3em;
 }
