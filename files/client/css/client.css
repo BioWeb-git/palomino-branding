@@ -18677,7 +18677,7 @@ h2 {
     margin-top: 90px !important;
   }
 }
-@media (min-height: 800px) {
+@media screen and (min-width: 701px) and (min-height: 800px) {
   .snap-scroll .main-content > .mod_article:first-child .snap-section {
     height: calc(100vh - 90px);
     margin-top: 90px !important;
@@ -18929,6 +18929,7 @@ body.scroll .page-header .header-navigation.is-fixed {
   text-indent: -9999px;
   display: block;
   overflow: hidden;
+  border: none !important;
 }
 .page-header .main-navigation .level_1 > li:nth-child(4) {
   order: 3;
@@ -19022,4 +19023,8 @@ form.contact-form .rs-columns .rs-column, form.contact-form .news-image-teaser .
 
 .main-navigation-mobile {
   font-size: 2em;
+}
+.main-navigation-mobile .icon-links {
+  font-size: .8em;
+  color: #000;
 }
