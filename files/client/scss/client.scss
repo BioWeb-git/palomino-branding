@@ -256,6 +256,7 @@ h2 {
                     
                     padding-top: 0;
                     min-height: 800px;
+                    height: 1px;
                     @mixin layout-large-height { 
                         height: calc(100vh - 90px);
                         margin-top: 90px !important;
