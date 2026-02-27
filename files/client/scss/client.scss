@@ -255,10 +255,10 @@ h2 {
                 .snap-section {
                     
                     padding-top: 0;
-                    min-height: 800px;
+                    min-height: 700px;
                     height: 1px;
                     @mixin layout-large-height { 
-                        height: calc(100vh - 90px);
+                        height: calc(100vh - 90px); 
                         margin-top: 90px !important;
                     }
 

@@ -18669,7 +18669,7 @@ h2 {
 }
 .snap-scroll .main-content > .mod_article:first-child .snap-section {
   padding-top: 0;
-  min-height: 800px;
+  min-height: 700px;
   height: 1px;
 }
 @media screen and (min-width: 701px) {
